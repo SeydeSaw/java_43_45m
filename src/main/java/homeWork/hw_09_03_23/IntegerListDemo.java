@@ -1,5 +1,5 @@
 package homeWork.hw_09_03_23;
-/* TODO: 12.03.23
+/* TODO: 14.03.23
         В классе IntegerListDemo создайте список целых чисел.
         Продемонстрируйте как:
         добавить в список элемент (в начало и в конец)
@@ -13,35 +13,35 @@ import java.util.ArrayList;
 
 public class IntegerListDemo {
 
-    //создание пустого списка целых чисел
+    //создаём пустой список целых чисел
     private static final ArrayList<Integer> numList = new ArrayList<>();
 
-    // метод добавления элемента в начало списка
+    // добавляем элемент в начало списка
     public static void addElementToBeginning(int element) {
         numList.add(0, element);
     }
 
-    // метод добавления элемента в конец списка
+    // добавляем элемент в конец списка
     public static void addElementToEnd(int element) {
         numList.add(element);
     }
 
-    // метод для определения длины списка
+    // определяем длину списка
     public static int getLength() {
         return numList.size();
     }
 
-    // метод удаления элемента из списка по индексу
+    // удаляем элемент из списка по индексу
     public static void removeElementByIndex(int index) {
         numList.remove(index);
     }
 
-    // метод удаления элемента из списка без указания индекса
+    // мудаляем элемент из списка без указания индекса
     public static void removeElement(int element) {
         numList.remove((Integer) element);
     }
 
-    // метод для определения пустой ли список и вывода сообщения на экран
+    // определяем пустой ли список и выводим на экран
     public static void isEmpty() {
         if (numList.isEmpty()) {
             System.out.println("Список пустой");
@@ -50,8 +50,8 @@ public class IntegerListDemo {
         }
     }
 
-    //метод для обхода списка и вывода его элементов на экран
-    public static void loopThroughList() {
+    //проходим по списку и выводим его элементы на экран
+    public static void getList() {
         if (numList.isEmpty()) {
             System.out.println("Список пустой");
         } else {
@@ -67,10 +67,10 @@ public class IntegerListDemo {
         numList.add(4);
         numList.add(5);
         numList.add(6);
-        // добавление двух элементов в начало списка
+        // добавление элемента в начало списка
         addElementToBeginning(1);
 
-        // добавление двух элементов в конец списка
+        // добавление элемента в конец списка
         addElementToEnd(7);
 
         // узнаем длину списка
@@ -87,6 +87,6 @@ public class IntegerListDemo {
         isEmpty();
 
         // обходим список и выводим на консоль каждый элемент
-        loopThroughList();
+        getList();
     }
 }

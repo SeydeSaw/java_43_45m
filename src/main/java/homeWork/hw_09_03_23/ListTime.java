@@ -1,5 +1,6 @@
 package homeWork.hw_09_03_23;
-/* TODO: 12.03.23
+
+/* TODO: 14.03.23
     создать List наполнить его 10М> элементами
     При наполнении списка  сохраняем i- тый элемент в переменную temp
     перебрать for-each loop
@@ -18,8 +19,9 @@ import java.util.ListIterator;
 
 public class ListTime {
     public static void main(String[] args) {
+        //Создаём пустой список
         List<Integer> list = new ArrayList<>();
-        //Создаем пустой список
+        //Создаём переменные
         long startTime;
         long endTime;
         //Записываем начало времени в переменную
@@ -31,7 +33,7 @@ public class ListTime {
         //Записываем конец времени в переменную
         endTime = System.currentTimeMillis();
         //Выводим на экран значение разницы между концом и началом времени
-        System.out.println("Classic for loop and call list.size() for each iteration " + (endTime - startTime));
+        System.out.println("Потрачено времени Classic for each : " + (endTime - startTime));
         //Записываем начало времени в переменную
         startTime = System.currentTimeMillis();
         //Записываем размер списка в переменную
@@ -43,7 +45,7 @@ public class ListTime {
         //Записываем конец времени в переменную
         endTime = System.currentTimeMillis();
         //Выводим на экран значение разницы между концом и началом времени
-        System.out.println("Classic for loop, list.size() in variable " + (endTime - startTime));
+        System.out.println("Потрачено времени classic for, но list.size() определяем в переменную : " + (endTime - startTime));
         //Записываем начало времени в переменную
         startTime = System.currentTimeMillis();
         //Записываем размер списка в переменную
@@ -55,7 +57,7 @@ public class ListTime {
         //Записываем конец времени в переменную
         endTime = System.currentTimeMillis();
         //Выводим на экран значение разницы между концом и началом времени
-        System.out.println("Classic for loop, list.size() in variable, iterate backwards " + (endTime - startTime));
+        System.out.println("Потрачено времени classic for, list.size(), перебираем с конца : " + (endTime - startTime));
         //Записываем начало времени в переменную
         startTime = System.currentTimeMillis();
         //Создаем итератор
@@ -67,7 +69,7 @@ public class ListTime {
         //Записываем конец времени в переменную
         endTime = System.currentTimeMillis();
         //Выводим на экран значение разницы между концом и началом времени
-        System.out.println("Iterator " + (endTime - startTime));
+        System.out.println("Потрачено времени используя Itertor : " + (endTime - startTime));
         //Записываем начало времени в переменную
         startTime = System.currentTimeMillis();
         //Создаем лист итератор
@@ -79,6 +81,6 @@ public class ListTime {
         //Записываем конец времени в переменную
         endTime = System.currentTimeMillis();
         //Выводим на экран значение разницы между концом и началом времени
-        System.out.println("List Iterator " + (endTime - startTime));
+        System.out.println("Потрачено времени используя List Iterator : " + (endTime - startTime));
     }
 }
