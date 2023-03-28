@@ -9,12 +9,14 @@ package algorithms.hw.hw_15_03_23;
       1. Вы не можете поместить больший диск на меньший диск.
       2. За один раз можно перемещать только один диск.
     Реализуйте два подхода для решения.
-    Итеративно
-    Рекурсивно
+    ***********************************************************
+    Итеративно - не получилось сделать
+    Рекурсивно +
  */
 public class HanoiTower {
+    // Итеративно - не смогла сделать, буду разбираться ещё
 
-    // Рекурсивно
+    // Рекурсивно:
     public static void move(int n, char left, char right, char middle) {
         if (n == 1) {
             System.out.println("Переместить диск 1 с " + left + " на " + right);
@@ -28,7 +30,7 @@ public class HanoiTower {
 
     public static void main(String[] args) {
         int n = 3;
-        System.out.println("Итеративно:");
+        System.out.println("Рекурсивно:");
         move(n, 'A', 'C', 'B');
     }
 }
